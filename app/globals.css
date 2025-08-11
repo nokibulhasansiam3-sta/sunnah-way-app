@@ -1,0 +1,231 @@
+
+      
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 170 50% 97%; /* #f0f8f7 */
+    --foreground: 236 18% 21%; /* #2b2d42 */
+
+    --card: 0 0% 100%; /* #ffffff */
+    --card-foreground: 236 18% 21%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 236 18% 21%;
+
+    --primary: 173 58% 39%; /* #2a9d8f */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 74% 66%; /* #e9c46a */
+    --secondary-foreground: 236 18% 21%;
+
+    --muted: 210 17% 92%;
+    --muted-foreground: 224 71% 25%;
+
+    --accent: 45 74% 66%; /* #e9c46a */
+    --accent-foreground: 236 18% 21%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 173 30% 85%;
+    --input: 173 30% 90%;
+    --ring: 173 58% 39%;
+
+    --radius: 0.75rem;
+
+    --font-poppins: 'Poppins', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-tiro-bangla: 'Tiro Bangla', sans-serif;
+    --font-hind-siliguri: 'Hind Siliguri', sans-serif;
+    --font-noto-sans-bengali: 'Noto Sans Bengali', sans-serif;
+  }
+
+  html.font-poppins { --font-selector: var(--font-poppins); }
+  html.font-inter { --font-selector: var(--font-inter); }
+  html.font-tiro-bangla { --font-selector: var(--font-tiro-bangla); }
+  html.font-hind-siliguri { --font-selector: var(--font-hind-siliguri); }
+  html.font-noto-sans-bengali { --font-selector: var(--font-noto-sans-bengali); }
+
+  html[lang="ar"] {
+    --font-selector: var(--font-tajawal);
+  }
+  html[lang="ur"] {
+    --font-selector: var(--font-noto-nastaliq-urdu);
+  }
+ 
+  .dark {
+    --background: 240 31% 14%; /* #1a1a2e */
+    --foreground: 0 0% 99%; /* #fffffe */
+
+    --card: 197 37% 24%; /* #264653 */
+    --card-foreground: 0 0% 99%;
+
+    --popover: 240 31% 14%;
+    --popover-foreground: 0 0% 99%;
+
+    --primary: 173 58% 39%;
+    --primary-foreground: 0 0% 99%;
+
+    --secondary: 45 74% 66%;
+    --secondary-foreground: 236 18% 21%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 45 74% 66%;
+    --accent-foreground: 236 18% 21%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 99%;
+
+    --border: 217 33% 27%;
+    --input: 217 33% 27%;
+    --ring: 173 58% 39%;
+  }
+
+  /* Forest Theme */
+  .theme-forest {
+    --background: 120 15% 96%;
+    --foreground: 120 25% 15%;
+    --primary: 130 40% 40%;
+    --primary-foreground: 120 25% 95%;
+    --secondary: 90 30% 60%;
+    --accent: 90 30% 60%;
+    --border: 120 15% 85%;
+    --input: 120 15% 90%;
+    --ring: 130 40% 40%;
+  }
+  .dark.theme-forest {
+    --background: 120 25% 10%;
+    --foreground: 120 15% 90%;
+    --primary: 130 40% 50%;
+    --primary-foreground: 120 25% 10%;
+    --secondary: 90 30% 40%;
+    --accent: 90 30% 40%;
+    --border: 120 25% 20%;
+    --input: 120 25% 20%;
+    --ring: 130 40% 50%;
+  }
+
+  /* Ocean Theme */
+  .theme-ocean {
+    --background: 210 50% 98%;
+    --foreground: 210 50% 20%;
+    --primary: 205 65% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 190 50% 70%;
+    --accent: 190 50% 70%;
+    --border: 210 50% 88%;
+    --input: 210 50% 92%;
+    --ring: 205 65% 55%;
+  }
+  .dark.theme-ocean {
+    --background: 210 50% 12%;
+    --foreground: 210 50% 95%;
+    --primary: 205 65% 65%;
+    --primary-foreground: 210 50% 10%;
+    --secondary: 190 50% 45%;
+    --accent: 190 50% 45%;
+    --border: 210 50% 22%;
+    --input: 210 50% 22%;
+    --ring: 205 65% 65%;
+  }
+
+  /* Rose Theme */
+  .theme-rose {
+    --background: 345 60% 98%;
+    --foreground: 340 10% 25%;
+    --primary: 340 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 345 50% 80%;
+    --accent: 345 50% 80%;
+    --border: 345 60% 90%;
+    --input: 345 60% 94%;
+    --ring: 340 70% 60%;
+  }
+  .dark.theme-rose {
+    --background: 340 10% 12%;
+    --foreground: 345 60% 95%;
+    --primary: 340 70% 70%;
+    --primary-foreground: 340 10% 10%;
+    --secondary: 345 50% 50%;
+    --accent: 345 50% 50%;
+    --border: 340 10% 22%;
+    --input: 340 10% 22%;
+    --ring: 340 70% 70%;
+  }
+  
+  /* Twilight Theme */
+  .theme-twilight {
+    --background: 240 10% 96%;
+    --foreground: 240 25% 15%;
+    --primary: 250 50% 60%;
+    --primary-foreground: 240 25% 98%;
+    --secondary: 220 40% 65%;
+    --accent: 220 40% 65%;
+    --border: 240 10% 85%;
+    --input: 240 10% 90%;
+    --ring: 250 50% 60%;
+  }
+  .dark.theme-twilight {
+    --background: 240 25% 10%;
+    --foreground: 240 10% 90%;
+    --primary: 250 50% 70%;
+    --primary-foreground: 240 25% 5%;
+    --secondary: 220 40% 45%;
+    --accent: 220 40% 45%;
+    --border: 240 25% 20%;
+    --input: 240 25% 20%;
+    --ring: 250 50% 70%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "liga" 1, "calt" 1;
+    font-family: var(--font-selector), sans-serif;
+  }
+  .page.active {
+    animation: fade-in 0.5s ease;
+  }
+
+  [dir="rtl"] {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .group-hover\:-translate-x-1:hover {
+    --tw-translate-x: 0.25rem !important;
+  }
+
+  [dir="rtl"] .mr-2 {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+  
+  [dir="rtl"] .text-right {
+    text-align: left;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+    
